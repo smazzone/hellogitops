@@ -18,3 +18,4 @@ argocd app create hello-world --repo https://github.com/smazzone/hellogitops --p
 
 argocd app set hello-world --sync-policy automated
 
+The default argocd polling interval is 3 minutes (180 seconds)
