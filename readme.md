@@ -1,4 +1,6 @@
 
+NB: Clone this repo if you want to test this out!
+
 Follow ArgoCD [getting started guide](https://argo-cd.readthedocs.io/en/stable/getting_started/#getting-started)
 
 to install ArgoCD on your K8s cluster:
@@ -40,10 +42,13 @@ switch to the proper K8s context and create an app in ArgoCD using the argo cli:
 
 ```
 kubectl config set-context --current --namespace=argocd
-
-argocd app create hello-world --repo https://github.com/smazzone/hellogitops --path manifests --dest-server https://kubernetes.default.svc --dest-namespace default
 ```
 
+NB: change your repo in the command below:
+
+```
+argocd app create hello-world --repo <your-repo-here> --path manifests --dest-server https://kubernetes.default.svc --dest-namespace default
+```
 
 to configure automated sync run:
 
@@ -51,4 +56,6 @@ to configure automated sync run:
 argocd app set hello-world --sync-policy automated
 ```
 
-NB:The default argocd polling interval is 3 minutes (180 seconds)
+NB: The default argocd polling interval is 3 minutes (180 seconds)
+
+change your manifests files and wait for the argocd polling interval. You can assess your pods in K8s and also in the ArgoCD UI.
