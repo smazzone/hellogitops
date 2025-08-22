@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-gitops
+  name: hello-gitops
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-world-gitops
+      app: hello-gitops
   template:
     metadata:
       labels:
-        app: hello-world-gitops
+        app: hello-gitops
     spec:
       containers:
-      - name: hello-world-gitops
+      - name: hello-gitops
         image: nginx:latest
         ports:
         - containerPort: 80
