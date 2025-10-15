@@ -8,5 +8,5 @@ spec:
     app: hello-gitops
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 81
+      targetPort: 81
