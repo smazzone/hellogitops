@@ -17,4 +17,4 @@ spec:
       - name: hello-gitops
         image: nginx:latest
         ports:
-        - containerPort: 81
+        - containerPort: 80
